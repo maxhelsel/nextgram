@@ -22,6 +22,13 @@ export function Modal({ children }: { children: React.ReactNode }) {
     <div className="modal-backdrop">
       <dialog ref={dialogRef} className="modal" onClose={onDismiss}>
         {children}
+        <button
+            onClick={() => {
+              router.push('/')
+            }}
+          >
+            Go Home( router.push('/') )
+          </button>
         <button onClick={onDismiss} className="close-button" />
       </dialog>
     </div>,
